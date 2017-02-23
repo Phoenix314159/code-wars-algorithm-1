@@ -1,14 +1,11 @@
-function people(arrN){
-  var arr2=[];
-  for(var i=0; i<arrN.length; i++){
+function largestOfFour(arr) {
 
-     if(arrN[i][0] >= 55 && arrN[i][1] >7){
+ return arr.map(function(a){
+    return a.sort(function(b,c){
+      return b-c;
+    });
 
-       arr2.push("Senior");
-     }else{
+    }).map(function(d){
 
-       arr2.push("Open");
-     }
- }
- return arr2; //return arr2
- }
+      return d[3];
+   }); }
